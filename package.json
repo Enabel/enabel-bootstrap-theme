@@ -1,5 +1,5 @@
 {
-  "name": "enabel-bootstrap-theme",
+  "name": "@enabel/enabel-bootstrap-theme",
   "version": "1.0.0",
   "description": "Enabel Bootstrap theme for internal use",
   "scripts": {
@@ -48,5 +48,13 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enabel/enabel-bootstrap-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Enabel/enabel-bootstrap-theme/issues"
+  },
+  "homepage": "https://github.com/Enabel/enabel-bootstrap-theme#readme"
 }
