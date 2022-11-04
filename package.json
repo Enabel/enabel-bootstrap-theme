@@ -1,0 +1,52 @@
+{
+  "name": "enabel-bootstrap-theme",
+  "version": "1.0.0",
+  "description": "Enabel Bootstrap theme for internal use",
+  "scripts": {
+    "test": "stylelint 'scss/**/*.scss'",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --mode=development --watch"
+  },
+  "keywords": [
+    "Enabel",
+    "Bootstrap",
+    "Theme"
+  ],
+  "author": "damien.lagae@enabel.be",
+  "license": "MIT",
+  "style": "dist/css/enabel-bootstrap-theme.min.css",
+  "main": "dist/js/enabel-bootstrap-theme.min.js",
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "postcss": "^8.4.18",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-twbs-bootstrap": "^6.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "flag-icon-css": "^4.1.7"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

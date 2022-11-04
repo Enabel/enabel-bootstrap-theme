@@ -1,0 +1,22 @@
+// Custom Bootstrap variables
+@import "variables";
+
+// Now bring in bootstrap!
+@import 'bootstrap/scss/bootstrap-reboot';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap-grid';
+
+// Custom Bootstrap element
+@import 'custom/button-enabel-login';
+
+// Bootstrap Overrides
+@import 'overrides/buttons';
+
+// Font Awesome icons
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+// Flag icons
+@import 'flag-icon-css/css/flag-icons.min.css';
