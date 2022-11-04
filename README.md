@@ -8,6 +8,10 @@ A Bootstrap version 5 Enabel look-and-feel featuring:
 - Supports NPM, Yarn and Bower package manager integration
 - Includes sample HTML pages and common components like navbar and cards for quick setup
 
+## Documentation
+
+[Demonstrations of this theme](https://enabel.github.io/enabel-bootstrap-theme/)
+
 ## Theme Developers
 
 If you find yourself wanting to enhance or fix the theme you'll be interested reading this
