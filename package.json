@@ -1,6 +1,6 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Enabel Bootstrap theme for internal use",
   "scripts": {
     "test": "stylelint 'scss/**/*.scss'",
