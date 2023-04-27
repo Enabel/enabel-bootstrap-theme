@@ -23,7 +23,7 @@ jobs:
           message: "Starting deployment of preview ⏳..."
 
       - name: Set domain
-        run: echo "DOMAIN=${{ github.actor }}.github.io" >> $GITHUB_ENV
+        run: echo "DOMAIN=enabel.github.io" >> $GITHUB_ENV
 
       - name: Checkout website repo
         uses: actions/checkout@v2
