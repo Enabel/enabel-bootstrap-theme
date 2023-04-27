@@ -1,0 +1,3 @@
+baseURL = 'http://example.org/' # You aren't really using this since the base url is overriden in the github action
+languageCode = 'en-us'
+title = 'Enabel Bootstrap Theme'
