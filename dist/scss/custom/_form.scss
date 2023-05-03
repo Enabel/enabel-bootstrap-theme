@@ -1,0 +1,4 @@
+label.form-label.required:after {
+  content: " * ";
+  color: $enabel-primary-red;
+}

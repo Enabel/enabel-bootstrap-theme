@@ -12,14 +12,11 @@
 @import 'custom/main-header';
 @import 'custom/form';
 
-// Bootstrap Overrides
-@import 'overrides/buttons';
-
 // Font Awesome icons
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
 
 // Flag icons
 @import 'flag-icons/css/flag-icons.min.css';
