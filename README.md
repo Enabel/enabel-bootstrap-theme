@@ -1,5 +1,7 @@
 # Enabel Bootstrap Theme
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/651787fc-956d-4f54-819d-8e08adcccea0/deploy-status)](https://app.netlify.com/sites/enabel-bootstrap-theme/deploys)
+
 A Bootstrap version 5 Enabel look-and-feel featuring:
 
 - Compatibility with pure Bootstrap markup
@@ -12,7 +14,7 @@ A Bootstrap version 5 Enabel look-and-feel featuring:
 
 ## Documentation
 
-[Demonstrations of this theme](https://enabel.github.io/enabel-bootstrap-theme/)
+[Demonstrations of this theme](https://enabel-bootstrap-theme.netlify.app/)
 
 ## Theme Developers
 
