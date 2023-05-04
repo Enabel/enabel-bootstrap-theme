@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Create a product">
+  <main role="main" class="container">
+    <div class="main-header">
+      <h2 class="main-title">Create a product</h2>
+    </div>
+    <div id="liveAlertPlaceholder"></div>
+    <div class="row row-cols-md-1 row-cols-1 g-4 mt-0">
+      <form>
+        <div class="mb-3">
+          <label for="product-name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product-name"
+            placeholder="Enter the product name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product-brand" class="form-label">Brand</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product-brand"
+            placeholder="Enter the product brand"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product-description" class="form-label">Description</label
+          >
+          <textarea
+            class="form-control"
+            id="product-description"
+            rows="3"
+            placeholder="Enter the product description"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="product-price" class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="product-price"
+            placeholder="Enter the product price"
+          />
+        </div>
+        <div class="row row-cols-md-1 row-cols-1 g-4 mt-0">
+          <div class="col d-flex justify-content-between">
+            <a href="/sample/list" class="btn btn-dark">Cancel</a>
+            <a href="#" class="btn btn-primary" id="alertSuccess">Create</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script>
+    const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+
+    const alert = (message, type) => {
+      const wrapper = document.createElement("div");
+      wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <a href="/sample/details" class="btn-close" aria-label="Close"></a>',
+        "</div>",
+      ].join("");
+
+      alertPlaceholder.append(wrapper);
+    };
+
+    const alertTrigger = document.getElementById("alertSuccess");
+    if (alertTrigger) {
+      alertTrigger.addEventListener("click", () => {
+        alert("Product successfully created!", "success");
+      });
+    }
+  </script>
+</Layout>

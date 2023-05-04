@@ -1,0 +1,124 @@
+---
+import Login from "../layouts/Login.astro";
+---
+
+<Login title="Login">
+  <main class="flex-shrink-0">
+    <section class="vh-100 bg-primary bg-gradient">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+                <img src="/images/enabel-bullet.png" alt="" />
+                <h2 class="mb-2">Mockup Starter Kit</h2>
+                <hr />
+                <div class="d-grid gap-2">
+                  <a
+                    href="/"
+                    class="btn btn-lg btn-block btn-outline-enabel"
+                    type="submit"
+                  >
+                    Login</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-lg btn-block btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#externalLogin">External Login</a
+                  >
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="externalLogin"
+                  tabindex="-1"
+                  aria-labelledby="externalLoginLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="externalLoginLabel">
+                          Sign in (external)
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form method="post">
+                          <!-- Username -->
+                          <div class="form-outline mb-4">
+                            <input
+                              type="email"
+                              value=""
+                              name="email"
+                              id="inputEmail"
+                              class="form-control form-control-lg"
+                              autocomplete="email"
+                              required
+                              autofocus
+                            />
+                            <label class="form-label" for="inputEmail"
+                              >Email</label
+                            >
+                          </div>
+
+                          <!-- Password -->
+                          <div class="form-outline mb-4">
+                            <input
+                              type="password"
+                              name="password"
+                              id="inputPassword"
+                              class="form-control form-control-lg"
+                              autocomplete="current-password"
+                              required
+                            />
+                            <label class="form-label" for="inputPassword"
+                              >Password</label
+                            >
+                          </div>
+
+                          <!-- RememberMe -->
+                          <div
+                            class="form-check d-flex justify-content-start mb-4"
+                          >
+                            <input
+                              type="checkbox"
+                              name="_remember_me"
+                              id="inputRememberMe"
+                              class="form-check-input"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inputRememberMe">&nbsp;Remember me</label
+                            >
+                          </div>
+
+                          <!-- csrf & submit -->
+                          <input
+                            type="hidden"
+                            name="_csrf_token"
+                            value="d9b88cb9750ef0eb4b67.U4jGpCwOn_ZOIc1-Ncqn8A1EHjG7lB3QWxN-3ME6Lug.Mbm2iWNK8JItQokdBK3owDwnXwT8xlKednAshbl1a5gA4qD1W2H3nzdJug"
+                          />
+                          <a
+                            href="/"
+                            class="btn btn-lg btn-block btn-primary"
+                            type="submit">Login</a
+                          >
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Login>

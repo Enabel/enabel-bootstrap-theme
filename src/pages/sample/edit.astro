@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Edit a product">
+  <main role="main" class="container">
+    <div class="main-header">
+      <h2 class="main-title">Edit a product</h2>
+    </div>
+
+    <div class="row row-cols-md-1 row-cols-1 g-4 mt-0">
+      <form action="/sample/list">
+        <div class="mb-3">
+          <label for="product-name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product-name"
+            value="Product 1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product-brand" class="form-label">Brand</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product-brand"
+            value="Brand 1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product-description" class="form-label">Description</label
+          >
+          <textarea class="form-control" id="product-description" rows="3"
+            >Description of product 1</textarea
+          >
+        </div>
+        <div class="mb-3">
+          <label for="product-price" class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="product-price"
+            value="10.00"
+          />
+        </div>
+        <div class="row row-cols-md-1 row-cols-1 g-4 mt-0">
+          <div class="col d-flex justify-content-between">
+            <a href="/sample/list" class="btn btn-dark">Cancel</a>
+            <a href="/sample/details" class="btn btn-primary">Save</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</Layout>

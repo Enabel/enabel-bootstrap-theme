@@ -1,13 +1,15 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Enabel Bootstrap theme for internal use",
   "scripts": {
+    "dev": "astro dev",
+    "prebuild": "webpack --mode=production --node-env=production",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "astro dev",
     "test": "stylelint 'scss/**/*.scss'",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --mode=development --watch"
+    "astro": "astro"
   },
   "keywords": [
     "Enabel",
@@ -22,6 +24,8 @@
     "dist/*"
   ],
   "devDependencies": {
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "astro": "^2.3.2",
     "autoprefixer": "^10.4.13",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
@@ -31,6 +35,8 @@
     "node-sass": "^7.0.3",
     "postcss": "^8.4.18",
     "postcss-loader": "^7.0.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.8.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",

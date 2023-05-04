@@ -1,4 +1,6 @@
-label.form-label.required:after {
-  content: " * ";
-  color: $enabel-primary-red;
+label.form-label.required {
+  &::after {
+    color: $enabel-primary-red;
+    content: " * ";
+  }
 }

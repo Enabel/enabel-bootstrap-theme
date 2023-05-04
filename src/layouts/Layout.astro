@@ -1,0 +1,28 @@
+---
+import "../../scss/enabel-bootstrap-theme.scss";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - Mockup</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+  <script is:inline src="../../dist/js/enabel-bootstrap-theme.min.js" />
+</html>
