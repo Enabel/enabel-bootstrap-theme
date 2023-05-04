@@ -7,6 +7,7 @@ $enabel-secondary-blue: rgb(0 125 165);
 $enabel-secondary-red: rgb(230 83 0);
 $enabel-secondary-yellow: rgb(203 151 0);
 $enabel-secondary-green: rgb(76 156 46);
+$enabel-gray-light: rgb(230 230 230);
 $enabel-cool-gray1: rgb(217 216 214);
 $enabel-cool-gray2: rgb(208 207 205);
 $enabel-cool-gray3: rgb(200 200 200);
@@ -19,17 +20,28 @@ $enabel-warm-gray4: rgb(181 173 165);
 $enabel-warm-gray5: rgb(172 161 153);
 $enabel-underline-color: rgb(88 87 86 / 25%);
 
+// Define Enabel color variations for the theme
+$enabel-primary: $enabel-primary-red;
+$enabel-secondary: $enabel-primary-yellow;
+$enabel-success: $enabel-secondary-green;
+$enabel-info: $enabel-secondary-blue;
+$enabel-warning: $enabel-secondary-red;
+$enabel-danger: $enabel-secondary-purple;
+$enabel-dark: $enabel-primary-grey;
+$enabel-light: $enabel-gray-light;
+
 // Set bootstrap colors with enabel colors
-$primary: $enabel-primary-red;
-$secondary: $enabel-primary-yellow;
-$success: $enabel-secondary-green;
-$info: $enabel-secondary-blue;
-$warning: $enabel-secondary-yellow;
-$danger: $enabel-secondary-purple;
-$dark: $enabel-primary-grey;
+$primary: $enabel-info;
+$secondary: $enabel_secondary-yellow;
+$success: $enabel-success;
+$info: $enabel-danger;
+$warning: $enabel-warning;
+$danger: $enabel-primary;
+$dark: $enabel-dark;
+$light: $enabel-light;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
-$min-contrast-ratio: 1.5 !default;
+$min-contrast-ratio: 2.6 !default;
 
 // Add our font as default
-$enabel-img-path: "../images" !default;
+$enabel-img-path: "../assets/images" !default;

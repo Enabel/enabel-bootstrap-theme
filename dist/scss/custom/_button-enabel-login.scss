@@ -1,8 +1,9 @@
-/* Button enabel login with logo
+/* Button enabel with logo
 -------------------------------------------------- */
-.btn-enabel-login {
+.btn-enabel-login,
+.btn-outline-enabel {
   @extend .btn;
-  @extend .btn-outline-dark;
+  @extend .btn-outline-primary;
 
   &::before {
     display: inline-block;
@@ -11,9 +12,26 @@
     margin-right: 0.5rem;
     vertical-align: text-top;
     content: "";
-    background-image : url('#{$enabel-img-path}/enabel-icon-round.png');
-    background-repeat:no-repeat;    
-    background-position : center center;    
-    background-size: contain;    
+    background-image: url("#{$enabel-img-path}/enabel-icon-round.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+.btn-enabel {
+  @extend .btn;
+  @extend .btn-primary;
+
+  &::before {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem;
+    vertical-align: text-top;
+    content: "";
+    background-image: url("#{$enabel-img-path}/enabel-icon-round.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 }

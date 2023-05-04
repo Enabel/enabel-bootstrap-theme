@@ -2,22 +2,21 @@
 @import "variables";
 
 // Now bring in bootstrap!
-@import 'bootstrap/scss/bootstrap-reboot';
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap/scss/bootstrap-grid';
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap-grid";
 
 // Custom Bootstrap element
-@import 'custom/button-enabel-login';
-@import 'custom/container';
-
-// Bootstrap Overrides
-@import 'overrides/buttons';
+@import "custom/button-enabel-login";
+@import "custom/container";
+@import "custom/main-header";
+@import "custom/form";
 
 // Font Awesome icons
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
 
 // Flag icons
-@import 'flag-icons/css/flag-icons.min.css';
+@import "flag-icons/css/flag-icons.min.css";
