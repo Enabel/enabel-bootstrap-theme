@@ -41,7 +41,7 @@ $dark: $enabel-dark;
 $light: $enabel-light;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
-$min-contrast-ratio: 2.6 !default;
+$min-contrast-ratio: 2.5 !default;
 
 // Add our font as default
 $enabel-img-path: "../assets/images" !default;
