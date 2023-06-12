@@ -36,3 +36,18 @@ $callout-color-scale: 40% !default;
   padding: 0.8rem;
   margin-top: 0.6rem;
 }
+
+@include color-mode(dark) {
+  $dark-bg-dark: darken($primary, 25%) !important;
+  $dark-bg-light: tint-color($primary, 20%) !important;
+  $dark-background: tint-color(lighten($body-bg-dark, 10%), 10%);
+
+  .callout {
+    background-color: $dark-background;
+    code,
+    .highlight{
+      background-color: $dark-bg-dark;
+    }
+  }
+}
+

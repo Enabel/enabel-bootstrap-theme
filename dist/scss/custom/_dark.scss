@@ -1,9 +1,27 @@
 @include color-mode(dark) {
+  $dark-bg-dark: darken($primary, 25%) !important;
+  $dark-bg-light: tint-color($primary, 20%) !important;
+  $dark-background: tint-color(lighten($body-bg-dark, 10%), 15%);
+
   .navbar.bg-light {
-    background-color: tint-color($primary, 20%) !important;
+    background-color: $dark-bg-light;
   }
 
   .navbar.bg-dark {
-    background-color: darken($primary, 25%) !important;
+    background-color: $dark-bg-dark;
+  }
+
+  .breadcrumb {
+    background-color: $dark-background;
+  }
+
+  .footer.bg-light {
+    background-color: transparent !important;
+  }
+
+  .footer {
+    border-top-color: $dark-bg-dark;
+    border-top-width: 1px;
+    border-top-style: dotted;
   }
 }
