@@ -1,0 +1,9 @@
+@include color-mode(dark) {
+  .navbar.bg-light {
+    background-color: tint-color($primary, 20%) !important;
+  }
+
+  .navbar.bg-dark {
+    background-color: darken($primary, 25%) !important;
+  }
+}
