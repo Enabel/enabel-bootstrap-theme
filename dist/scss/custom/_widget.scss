@@ -78,24 +78,17 @@ $widget-color: #fff;
 }
 
 @include color-mode(dark) {
-  $dark-bg-dark: darken($primary, 25%) !important;
-  $dark-bg-light: tint-color($primary, 20%) !important;
-  $dark-background: tint-color(lighten($body-bg-dark, 10%), 15%);
-
-  .widget {
-    color: $dark-bg-dark;
-  }
   @each $color, $value in $theme-colors {
+    $widget-background: shade-color($value, 60%);
+    $widget-icon-background: shade-color($value, 80%);
+    $widget-color: shade-color($value, 20%);
     .widget-#{$color} {
-      &.coloured-icon {
-        background-color: $dark-bg-dark;
-        color: $dark-bg-dark;
-
-        .icon {
-          color: $dark-bg-dark;
-        }
+      background-color: $widget-background;
+      color: $gray-400;
+      .icon {
+        background-color: $widget-icon-background;
+        color: $widget-color;
       }
     }
   }
 }
-

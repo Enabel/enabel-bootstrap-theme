@@ -1,4 +1,5 @@
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min";
+import "./color-modes.js";
 
 const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'

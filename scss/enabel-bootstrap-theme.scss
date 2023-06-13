@@ -10,13 +10,13 @@
 @import "bootstrap/scss/bootstrap-grid";
 
 // Custom Bootstrap element
+@import "custom/dark";
 @import "custom/button-enabel-login";
 @import "custom/container";
 @import "custom/main-header";
 @import "custom/form";
 @import "custom/callout";
 @import "custom/widget";
-@import "custom/dark";
 
 // Font Awesome icons
 @import "@fortawesome/fontawesome-free/scss/fontawesome";

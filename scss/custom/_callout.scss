@@ -6,7 +6,7 @@ $callout-color-scale: 40% !default;
   padding: 1.25rem;
   margin-top: 1.25rem;
   border-left-style: solid;
-  border-bottom-width: 0.25rem;
+  border-left-width: 0.3rem;
 }
 .callout h5 {
   margin-top: 0;
@@ -16,7 +16,7 @@ $callout-color-scale: 40% !default;
 }
 .callout code,
 .callout .highlight {
-  background-color: var(--bs-gray-100);
+  background-color: $gray-100;
 }
 
 @each $state, $value in $theme-colors {
@@ -38,16 +38,21 @@ $callout-color-scale: 40% !default;
 }
 
 @include color-mode(dark) {
-  $dark-bg-dark: darken($primary, 25%) !important;
-  $dark-bg-light: tint-color($primary, 20%) !important;
-  $dark-background: tint-color(lighten($body-bg-dark, 10%), 10%);
+  @each $state, $value in $theme-colors {
+    $callout-background: shade-color($value, 80%);
+    $callout-border: shade-color($value, 30%);
+    $callout-color: shade-color($value, 20%);
+    .callout-#{$state} {
+      border-left-color: $callout-border;
+      background-color: $callout-background;
+      h5 {
+        color: $callout-color;
+      }
+      code,
+      .highlight{
+        @extend .bg-body-tertiary;
+      }
 
-  .callout {
-    background-color: $dark-background;
-    code,
-    .highlight{
-      background-color: $dark-bg-dark;
     }
   }
 }
-

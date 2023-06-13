@@ -1,7 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
+import ColorMode from "../components/ColorMode.astro";
 ---
-
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -32,22 +32,19 @@ const currentPath = Astro.url.pathname;
             >
           </li>
           <li class="nav-item">
-            <a class={currentPath === '/dark' ? 'nav-link active' : 'nav-link'} href="/dark"
-            ><i class="fa fa-moon"></i> Dark</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class={currentPath === '/sample/list' ? 'nav-link active' : 'nav-link'} href="/sample/list"
+            <a class={currentPath === '/sample/list/' ? 'nav-link active' : 'nav-link'} href="/sample/list/"
               ><i class="fa fa-list"></i> Sample CRUD</a
             >
           </li>
+
           <li class="nav-item">
-            <a class={currentPath === '/sample/dashboard' ? 'nav-link active' : 'nav-link'} href="/sample/dashboard"
+            <a class={currentPath === '/sample/dashboard/' ? 'nav-link active' : 'nav-link'} href="/sample/dashboard/"
               ><i class="fa fa-chart-line"></i> Sample dashboard</a
             >
           </li>
         </ul>
         <ul class="navbar-nav ms-auto order-5">
+          <ColorMode/>
           <li class="nav-item dropdown">
             <a
               href="#"
@@ -85,7 +82,7 @@ const currentPath = Astro.url.pathname;
                 style="width: 32px;"></i> John SMITH
             </a>
             <div
-              class="dropdown-menu dropdown-menu-right"
+              class="dropdown-menu dropdown-menu-end"
               aria-labelledby="navbarDropdownMenuLink"
             >
               <p class="dropdown-item-text text-muted mb-0">
