@@ -74,6 +74,10 @@ $widget-color: #fff;
         color: $widget-color;
       }
     }
+
+    .widget-content {
+      color: color-contrast($value) if($enable-important-utilities, !important, null);
+    }
   }
 }
 
@@ -89,6 +93,9 @@ $widget-color: #fff;
         background-color: $widget-icon-background;
         color: $widget-color;
       }
+    }
+    .widget-content {
+      color: color-contrast($value) if($enable-important-utilities, !important, null);
     }
   }
 }

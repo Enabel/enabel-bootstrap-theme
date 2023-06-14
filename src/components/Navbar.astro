@@ -32,6 +32,11 @@ import ColorMode from "../components/ColorMode.astro";
             >
           </li>
           <li class="nav-item">
+            <a class={currentPath === '/components' ? 'nav-link active' : 'nav-link'} href="/components/"
+            ><i class="fa fa-shapes"></i> Components</a
+            >
+          </li>
+          <li class="nav-item">
             <a class={currentPath === '/sample/list/' ? 'nav-link active' : 'nav-link'} href="/sample/list/"
               ><i class="fa fa-list"></i> Sample CRUD</a
             >

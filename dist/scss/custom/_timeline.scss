@@ -1,0 +1,78 @@
+.horizontal-timeline {
+  padding-top: 50px;
+}
+
+.horizontal-timeline .items {
+  border-top: 3px solid $light;
+}
+
+.horizontal-timeline .items .items-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed $light;
+    top: 0;
+  }
+}
+
+.horizontal-timeline .items .items-list .event-date {
+  @extend .badge;
+  @extend .text-bg-light;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  width: 95px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding-top: 8px;
+}
+
+@each $state, $value in $theme-colors {
+  .horizontal-timeline .items .items-list .event-date.event-date-#{$state} {
+    @extend .text-bg-#{$state};
+  }
+}
+
+
+
+
+@media (min-width: 1140px) {
+  .horizontal-timeline .items .items-list {
+    display: inline-block;
+    padding-top: 45px;
+  }
+
+  .horizontal-timeline .items .items-list .event-date {
+    top: -40px;
+  }
+}
+
+@include color-mode(dark) {
+  .horizontal-timeline .items {
+      border-top: 3px solid $dark;
+  }
+
+  .horizontal-timeline .items .items-list {
+    &::before {
+      border-right: 2px dashed $dark;
+    }
+  }
+
+  .horizontal-timeline .items .items-list .event-date {
+    @extend .text-bg-dark;
+  }
+
+  @each $state, $value in $theme-colors {
+    .horizontal-timeline .items .items-list .event-date.event-date-#{$state} {
+      @extend .text-bg-#{$state};
+    }
+  }
+}

@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ButtonEnabelLogin from "../components/BtnEnabelLogin.astro";
+import Callout from "../components/Callout.astro";
+import Widget from "../components/Widget.astro";
+import Timeline from "../components/Timeline.astro";
+---
+
+<Layout title="Components">
+    <main role="main">
+        <div class="container">
+            <div id="banner">
+                <div class="row">
+                    <div class="col-md-9 col-sm-8">
+                        <h1>Enabel Custom Components Reference</h1>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#btn-enabel-login">Button Enabel Login</a>
+                            <a class="list-group-item list-group-item-action" href="#callout">Callout</a>
+                            <a class="list-group-item list-group-item-action" href="#widget">Widget</a>
+                            <a class="list-group-item list-group-item-action" href="#timeline">Timeline</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button Enabel Login ================================================== -->
+            <hr />
+            <div class="row mt-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="btn-enabel-login">Button Enabel Login</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ButtonEnabelLogin />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Callout ================================================== -->
+            <hr />
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="callout">Callout</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <Callout />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget ================================================== -->
+            <hr />
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="widget">Widget</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <Widget />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline ================================================== -->
+            <hr />
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="timeline">Timeline</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <Timeline />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</Layout>
