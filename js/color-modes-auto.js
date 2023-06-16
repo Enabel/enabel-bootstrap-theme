@@ -10,11 +10,15 @@
             return storedTheme
         }
 
-        return 'light' // Set light as default
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
     const setTheme = theme => {
-        document.documentElement.setAttribute('data-bs-theme', theme)
+        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', theme)
+        }
     }
 
     setTheme(getPreferredTheme())
