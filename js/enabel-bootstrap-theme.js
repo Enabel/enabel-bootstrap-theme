@@ -1,4 +1,6 @@
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min";
+global.bootstrap = bootstrap;
+
 import "./color-modes.js";
 
 const popoverTriggerList = document.querySelectorAll(
