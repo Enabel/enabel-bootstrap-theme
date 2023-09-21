@@ -5,36 +5,17 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: "./js/color-modes.js",
-  output: {
-      path: path.resolve(__dirname + "/dist"),
-      publicPath: "../",
-      filename: "js/color-modes.min.js",
-  }
-}
 
-module.exports = {
-  context: path.resolve(__dirname),
-  entry: "./js/color-modes-auto.js",
-  output: {
-    path: path.resolve(__dirname + "/dist"),
-    publicPath: "../",
-    filename: "js/color-modes-auto.min.js",
-  }
-}
-
-module.exports = {
-  context: path.resolve(__dirname),
-
-  entry: [
-    "./js/enabel-bootstrap-theme.js",
-    "./scss/enabel-bootstrap-theme.scss",
-  ],
+  entry: {
+    'color-mode': "./js/color-modes.js",
+    'color-mode-auto': "./js/color-modes-auto.js",
+    'enabel-bootstrap-theme': "./js/enabel-bootstrap-theme.js",
+  },
 
   output: {
     path: path.resolve(__dirname + "/dist"),
     publicPath: "../",
-    filename: "js/enabel-bootstrap-theme.min.js",
+    filename: 'js/[name].min.js',
   },
   module: {
     rules: [
