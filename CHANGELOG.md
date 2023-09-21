@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.13](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.13) (2023-09-21)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.12...2.0.13)
+
 ## [2.0.12](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.12) (2023-09-21)
 
 [Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.11...2.0.12)
