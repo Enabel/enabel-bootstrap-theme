@@ -47,6 +47,11 @@ import ColorMode from "../components/ColorMode.astro";
               ><i class="fa fa-chart-line"></i> Sample dashboard</a
             >
           </li>
+          <li class="nav-item">
+            <a class={currentPath === '/sample/fluid/dashboard/' ? 'nav-link active' : 'nav-link'} href="/sample/fluid/dashboard/"
+            ><i class="fa fa-chart-line"></i> Sample dashboard (fluid)</a
+            >
+          </li>
         </ul>
         <ul class="navbar-nav ms-auto order-5">
           <ColorMode/>

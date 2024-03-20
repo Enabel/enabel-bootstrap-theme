@@ -24,8 +24,8 @@ $callout-color-scale: 40% !default;
   $callout-border: shift-color($value, $callout-border-scale);
   $callout-color: shift-color($value, $callout-color-scale);
   .callout-#{$state} {
-    border-left-color: $callout-border;
     background-color: $callout-background;
+    border-left-color: $callout-border;
     h5 {
       color: $callout-color;
     }
@@ -43,8 +43,8 @@ $callout-color-scale: 40% !default;
     $callout-border: shade-color($value, 30%);
     $callout-color: shade-color($value, 20%);
     .callout-#{$state} {
-      border-left-color: $callout-border;
       background-color: $callout-background;
+      border-left-color: $callout-border;
       h5 {
         color: $callout-color;
       }

@@ -1,5 +1,11 @@
-main > .container {
+main > .container,
+main > .container-fluid {
   padding-top: 4.5rem;
+}
+
+main > .container-fluid {
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 
 .bi {

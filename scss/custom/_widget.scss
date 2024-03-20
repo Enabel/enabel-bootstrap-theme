@@ -2,35 +2,35 @@ $widget-color: #fff;
 
 .widget {
   display: flex;
-  border-radius: 4px;
-  color: $widget-color;
   margin-bottom: 30px;
+  color: $widget-color;
+  border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 10%);
 
   .widget-icon {
-    background-color: rgba(0, 0, 0, 30%);
-    border-radius: 4px 0 0 4px;
     display: flex;
-    min-width: 85px;
     align-items: center;
     justify-content: center;
+    min-width: 85px;
     padding: 20px;
     font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 30%);
+    border-radius: 4px 0 0 4px;
     transition: background-color 0.5s;
   }
 
   .widget-content {
+    position: relative;
     flex: 1;
+    align-self: center;
     padding-left: 20px;
     margin: 0;
-    align-self: center;
-    position: relative;
 
     h2, h4 {
-      text-transform: uppercase;
       margin: 0 0 5px;
-      font-weight: 300;
       font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
     }
 
     h3 {
@@ -66,12 +66,12 @@ $widget-color: #fff;
     background-color: $value;
 
     &.coloured-icon {
-      background-color: $widget-color;
       color: #2a2a2a;
+      background-color: $widget-color;
 
       .icon {
-        background-color: $value;
         color: $widget-color;
+        background-color: $value;
       }
     }
 
@@ -87,11 +87,11 @@ $widget-color: #fff;
     $widget-icon-background: shade-color($value, 80%);
     $widget-color: shade-color($value, 20%);
     .widget-#{$color} {
-      background-color: $widget-background;
       color: $gray-400;
+      background-color: $widget-background;
       .icon {
-        background-color: $widget-icon-background;
         color: $widget-color;
+        background-color: $widget-icon-background;
       }
     }
     .widget-content {

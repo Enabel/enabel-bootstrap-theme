@@ -7,18 +7,18 @@
 }
 
 .horizontal-timeline .items .items-list {
-  display: block;
   position: relative;
-  text-align: center;
+  display: block;
   padding-top: 70px;
   margin-right: 0;
+  text-align: center;
 
   &::before {
-    content: "";
     position: absolute;
-    height: 36px;
-    border-right: 2px dashed $light;
     top: 0;
+    height: 36px;
+    content: "";
+    border-right: 2px dashed $light;
   }
 }
 
@@ -27,12 +27,12 @@
   @extend .text-bg-light;
   position: absolute;
   top: 36px;
-  left: 0;
   right: 0;
+  left: 0;
   width: 95px;
+  padding-top: 8px;
   margin: 0 auto;
   font-size: 0.9rem;
-  padding-top: 8px;
 }
 
 @each $state, $value in $theme-colors {
