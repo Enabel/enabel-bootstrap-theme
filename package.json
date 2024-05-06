@@ -18,10 +18,13 @@
   ],
   "author": "damien.lagae@enabel.be",
   "license": "MIT",
+  "sass": "scss/enabel-bootstrap-theme.scss",
   "style": "dist/css/enabel-bootstrap-theme.min.css",
   "main": "dist/js/enabel-bootstrap-theme.min.js",
   "files": [
-    "dist/*"
+    "dist/*",
+    "scss/**/*.scss",
+    "assets/**/*"
   ],
   "devDependencies": {
     "@originjs/vite-plugin-commonjs": "^1.0.3",
