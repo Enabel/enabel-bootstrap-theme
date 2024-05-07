@@ -1,7 +1,7 @@
 {
-  "extends": ["stylelint-config-twbs-bootstrap", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-twbs-bootstrap"],
   "rules": {
     "selector-no-qualifying-type": null,
-    "declaration-no-important": [true, { "severity": "warning" }]
+    "declaration-no-important": null
   }
 }

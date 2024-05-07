@@ -6,7 +6,7 @@ $callout-color-scale: 40% !default;
   padding: 1.25rem;
   margin-top: 1.25rem;
   border-left-style: solid;
-  border-left-width: 0.3rem;
+  border-left-width: .3rem;
 }
 .callout h5 {
   margin-top: 0;
@@ -33,8 +33,8 @@ $callout-color-scale: 40% !default;
 }
 
 .callout-sm {
-  padding: 0.8rem;
-  margin-top: 0.6rem;
+  padding: .8rem;
+  margin-top: .6rem;
 }
 
 @include color-mode(dark) {

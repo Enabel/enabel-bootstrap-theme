@@ -20,6 +20,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
+      {
         test: /\.(scss)$/,
         use: [
           MiniCssExtractPlugin.loader,

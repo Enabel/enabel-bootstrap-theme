@@ -1,0 +1,19 @@
+{
+    "name": "enabel/enabel-bootstrap-theme",
+    "description": "Enabel Bootstrap theme for internal use",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Enabel\\EnabelBootstrapTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien Lagae",
+            "email": "damien.lagae@enabel.be"
+        }
+    ],
+    "require": {
+    }
+}

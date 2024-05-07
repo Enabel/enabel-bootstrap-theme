@@ -32,7 +32,7 @@
   width: 95px;
   padding-top: 8px;
   margin: 0 auto;
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
 
 @each $state, $value in $theme-colors {
@@ -40,8 +40,6 @@
     @extend .text-bg-#{$state};
   }
 }
-
-
 
 
 @media (min-width: 1140px) {
@@ -57,7 +55,7 @@
 
 @include color-mode(dark) {
   .horizontal-timeline .items {
-      border-top: 3px solid $dark;
+    border-top: 3px solid $dark;
   }
 
   .horizontal-timeline .items .items-list {

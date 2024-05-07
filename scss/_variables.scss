@@ -33,11 +33,5 @@ $light: $enabel-gray-light;
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
 $min-contrast-ratio: 2.5 !default;
 
-// Add our font as default
-$enabel-img-path: "../assets/images" !default;
-
-// Font Awesome variables
-$fa-font-path: "@fortawesome/fontawesome-free/webfonts" !default;
-
 // Bootstrap font family
 $font-family-base: "Ubuntu", sans-serif !default;

@@ -16,7 +16,7 @@ $widget-color: #fff;
     font-size: 2.5rem;
     background-color: rgba(0, 0, 0, 30%);
     border-radius: 4px 0 0 4px;
-    transition: background-color 0.5s;
+    transition: background-color .5s;
   }
 
   .widget-content {
@@ -26,7 +26,8 @@ $widget-color: #fff;
     padding-left: 20px;
     margin: 0;
 
-    h2, h4 {
+    h2,
+    h4 {
       margin: 0 0 5px;
       font-size: 2rem;
       font-weight: 300;
@@ -44,8 +45,8 @@ $widget-color: #fff;
 
     span.badge {
       position: absolute;
-      top:-15px;
-      right:-5px;
+      top: -15px;
+      right: -5px;
       font-size: 1rem;
     }
   }
