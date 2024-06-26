@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.0.18](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.18) (2024-06-26)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.17...2.0.18)
+
+**Merged pull requests:**
+
+- ✨ Add more file as css file \(error, variable\) [\#20](https://github.com/Enabel/enabel-bootstrap-theme/pull/20) ([damienlagae](https://github.com/damienlagae))
+
+## [2.0.17](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.17) (2024-05-07)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.16...2.0.17)
+
+## [2.0.16](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.16) (2024-05-06)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.15...2.0.16)
+
+**Merged pull requests:**
+
+- ⬆️ Bump vite from 4.5.2 to 4.5.3 [\#13](https://github.com/Enabel/enabel-bootstrap-theme/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [2.0.15](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.15) (2024-03-20)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.14...2.0.15)
+
+## [2.0.14](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.14) (2023-09-21)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.13...2.0.14)
+
 ## [2.0.13](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.13) (2023-09-21)
 
 [Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.12...2.0.13)
