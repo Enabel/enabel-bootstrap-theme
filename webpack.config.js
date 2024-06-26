@@ -10,6 +10,8 @@ module.exports = {
     'color-mode': "./js/color-modes.js",
     'color-mode-auto': "./js/color-modes-auto.js",
     'enabel-bootstrap-theme': "./js/enabel-bootstrap-theme.js",
+    'variables': "./scss/enabel-variables.scss",
+    'error': "./scss/enabel-error.scss",
   },
 
   output: {
@@ -52,14 +54,10 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/enabel-bootstrap-theme.min.css",
+      filename: "css/[name].min.css",
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {
-          from: "assets/images",
-          to: "images",
-        },
         {
           from: "scss",
           to: "scss",

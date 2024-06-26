@@ -1,0 +1,46 @@
+@import "variables";
+
+@mixin add-css-variable($name, $color) {
+  --#{$name}: #{inspect($color)};
+}
+
+:root {
+  // repeat as necessary for all your vars
+  @include add-css-variable("enabel-primary-grey", $enabel-primary-grey);
+  @include add-css-variable("enabel-primary-yellow", $enabel-primary-yellow);
+  @include add-css-variable("enabel-primary-red", $enabel-primary-red);
+  @include add-css-variable("enabel-secondary-purple", $enabel-secondary-purple);
+  @include add-css-variable("enabel-secondary-blue", $enabel-secondary-blue);
+  @include add-css-variable("enabel-secondary-red", $enabel-secondary-red);
+  @include add-css-variable("enabel-secondary-yellow", $enabel-secondary-yellow);
+  @include add-css-variable("enabel-secondary-green", $enabel-secondary-green);
+  @include add-css-variable("enabel-gray-light", $enabel-gray-light);
+  @include add-css-variable("enabel-cool-gray1", $enabel-cool-gray1);
+  @include add-css-variable("enabel-cool-gray2", $enabel-cool-gray2);
+  @include add-css-variable("enabel-cool-gray3", $enabel-cool-gray3);
+  @include add-css-variable("enabel-cool-gray4", $enabel-cool-gray4);
+  @include add-css-variable("enabel-cool-gray5", $enabel-cool-gray5);
+  @include add-css-variable("enabel-warm-gray1", $enabel-warm-gray1);
+  @include add-css-variable("enabel-warm-gray2", $enabel-warm-gray2);
+  @include add-css-variable("enabel-warm-gray3", $enabel-warm-gray3);
+  @include add-css-variable("enabel-warm-gray4", $enabel-warm-gray4);
+  @include add-css-variable("enabel-warm-gray5", $enabel-warm-gray5);
+  @include add-css-variable("enabel-underline-color", $enabel-underline-color);
+
+  /* Set bootstrap colors with enabel colors */
+  @include add-css-variable("primary", $enabel-secondary-blue);
+  @include add-css-variable("secondary", $enabel-secondary-yellow);
+  @include add-css-variable("success", $enabel-secondary-green);
+  @include add-css-variable("info", $enabel-secondary-purple);
+  @include add-css-variable("warning", $enabel-secondary-red);
+  @include add-css-variable("danger", $enabel-primary-red);
+  @include add-css-variable("dark", $enabel-primary-grey);
+  @include add-css-variable("light", $enabel-gray-light);
+
+  /* Bootstrap font family */
+  @include add-css-variable("font-family-base", $font-family-base);
+
+  // The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
+  @include add-css-variable("min-contrast-ratio", $min-contrast-ratio);
+}
+
