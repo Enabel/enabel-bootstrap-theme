@@ -1,6 +1,6 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "description": "Enabel Bootstrap theme for internal use",
   "scripts": {
     "dev": "astro dev",
