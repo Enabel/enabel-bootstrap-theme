@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.23](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.23) (2025-05-28)
+
+[Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.22...2.0.23)
+
 ## [2.0.22](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.22) (2025-04-30)
 
 [Full Changelog](https://github.com/enabel/enabel-bootstrap-theme/compare/2.0.21...2.0.22)
@@ -7,9 +11,6 @@
 **Merged pull requests:**
 
 - \[Snyk\] Upgrade bootstrap from 5.3.3 to 5.3.5 [\#31](https://github.com/Enabel/enabel-bootstrap-theme/pull/31) ([thijsbraem](https://github.com/thijsbraem))
-- Upgrade Astro from 4.x to 5.x
-- Upgrade dependencies
-- Add typescript support
 
 ## [2.0.21](https://github.com/enabel/enabel-bootstrap-theme/tree/2.0.21) (2024-11-07)
 
