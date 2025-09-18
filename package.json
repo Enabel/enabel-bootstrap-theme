@@ -1,7 +1,7 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "2.0.24",
-  "description": "Enabel Bootstrap theme for internal use",
+  "version": "3.0.0",
+  "description": "Custom Bootstrap theme for Enabel applications with CSS and JavaScript components",
   "scripts": {
     "dev": "astro dev",
     "prebuild": "webpack --mode=production --node-env=production",
@@ -12,19 +12,32 @@
     "astro": "astro"
   },
   "keywords": [
-    "Enabel",
-    "Bootstrap",
-    "Theme"
+    "enabel",
+    "bootstrap",
+    "theme",
+    "css",
+    "scss",
+    "frontend",
+    "ui",
+    "components"
   ],
   "author": "damien.lagae@enabel.be",
   "license": "MIT",
   "sass": "scss/enabel-bootstrap-theme.scss",
   "style": "dist/css/enabel-bootstrap-theme.min.css",
-  "main": "dist/js/enabel-bootstrap-theme.min.js",
+  "exports": {
+    ".": {
+      "style": "./dist/css/enabel-bootstrap-theme.min.css",
+      "sass": "./scss/enabel-bootstrap-theme.scss"
+    },
+    "./css": "./dist/css/enabel-bootstrap-theme.min.css",
+    "./scss": "./scss/enabel-bootstrap-theme.scss"
+  },
   "files": [
-    "dist/*",
-    "scss/**/*.scss",
-    "assets/**/*"
+    "dist/",
+    "scss/",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "devDependencies": {
     "@originjs/vite-plugin-commonjs": "^1.0",
@@ -32,10 +45,8 @@
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
     "copy-webpack-plugin": "^12.0",
-    "css-loader": "^7.1",
-    "file-loader": "^6.2",
+    "css-loader": "^7.1.1",
     "mini-css-extract-plugin": "^2.9",
-    "node-sass": "^9.0",
     "postcss": "^8.4",
     "postcss-loader": "^8.1",
     "prettier": "^3.2",
@@ -44,7 +55,6 @@
     "stylelint": "^16.5",
     "stylelint-config-twbs-bootstrap": "^14.1",
     "typescript": "^5.8.3",
-    "url-loader": "^4.1",
     "webpack": "^5.91",
     "webpack-cli": "^5.1"
   },
@@ -52,7 +62,7 @@
     "@popperjs/core": "^2.11",
     "bootstrap": "^5.3",
     "sass": "^1.77",
-    "sass-loader": "^14.2"
+    "sass-loader": "^14.2.1"
   },
   "engines": {
     "node": ">=18.0.0"

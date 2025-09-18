@@ -1,13 +1,15 @@
+@use "sass:color";
+
 // Define enabel colors
-$enabel-primary-grey: rgb(88 87 86);
+$enabel-primary-grey: color.scale(rgb(88 87 86), $lightness: -5%);
 $enabel-primary-yellow: rgb(249 181 0);
 $enabel-primary-red: rgb(216 26 26);
-$enabel-secondary-purple: rgb(103 38 102);
+$enabel-secondary-purple: color.scale(rgb(103 38 102), $lightness: 5%);
 $enabel-secondary-blue: rgb(0 125 165);
-$enabel-secondary-red: rgb(230 83 0);
-$enabel-secondary-yellow: rgb(203 151 0);
-$enabel-secondary-green: rgb(76 156 46);
-$enabel-gray-light: rgb(230 230 230);
+$enabel-secondary-red: color.scale(rgb(230 83 0), $lightness: 10%);
+$enabel-secondary-yellow: color.scale(rgb(203 151 0), $lightness: 3%);
+$enabel-secondary-green: color.scale(rgb(76 156 46), $lightness: -10%);
+$enabel-gray-light: color.scale($enabel-primary-grey, $lightness: 85%);
 $enabel-cool-gray1: rgb(217 216 214);
 $enabel-cool-gray2: rgb(208 207 205);
 $enabel-cool-gray3: rgb(200 200 200);
@@ -31,7 +33,7 @@ $dark: $enabel-primary-grey;
 $light: $enabel-gray-light;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
-$min-contrast-ratio: 2.5 !default;
+$min-contrast-ratio: 2.0 !default;
 
 // Bootstrap font family
 $font-family-base: "Ubuntu", sans-serif !default;

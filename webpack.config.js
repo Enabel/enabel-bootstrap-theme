@@ -7,8 +7,6 @@ module.exports = {
   context: path.resolve(__dirname),
 
   entry: {
-    'color-mode': "./js/color-modes.js",
-    'color-mode-auto': "./js/color-modes-auto.js",
     'enabel-bootstrap-theme': "./js/enabel-bootstrap-theme.js",
     'variables': "./scss/enabel-variables.scss",
     'error': "./scss/enabel-error.scss",
@@ -23,9 +21,10 @@ module.exports = {
     rules: [
       {
         test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]'
+        }
       },
       {
         test: /\.(scss)$/,
@@ -68,5 +67,17 @@ module.exports = {
       verbose: true,
       dry: false,
     }),
+    // Custom plugin to remove unnecessary JS files
+    {
+      apply: (compiler) => {
+        compiler.hooks.emit.tapAsync('RemoveUnnecessaryJS', (compilation, callback) => {
+          // Remove unnecessary JS files for SCSS entries
+          delete compilation.assets['js/variables.min.js'];
+          delete compilation.assets['js/error.min.js'];
+          delete compilation.assets['js/enabel-bootstrap-theme.min.js'];
+          callback();
+        });
+      }
+    },
   ],
 };
