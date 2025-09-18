@@ -1,6 +1,6 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Custom Bootstrap theme for Enabel applications with CSS and JavaScript components",
   "scripts": {
     "dev": "astro dev",
@@ -23,12 +23,14 @@
   ],
   "author": "damien.lagae@enabel.be",
   "license": "MIT",
+  "main": "dist/css/enabel-bootstrap-theme.min.css",
   "sass": "scss/enabel-bootstrap-theme.scss",
   "style": "dist/css/enabel-bootstrap-theme.min.css",
   "exports": {
     ".": {
       "style": "./dist/css/enabel-bootstrap-theme.min.css",
-      "sass": "./scss/enabel-bootstrap-theme.scss"
+      "sass": "./scss/enabel-bootstrap-theme.scss",
+      "default": "./dist/css/enabel-bootstrap-theme.min.css"
     },
     "./css": "./dist/css/enabel-bootstrap-theme.min.css",
     "./scss": "./scss/enabel-bootstrap-theme.scss"
