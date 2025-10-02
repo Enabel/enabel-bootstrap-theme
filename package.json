@@ -1,6 +1,6 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Custom Bootstrap theme for Enabel applications with CSS and JavaScript components",
   "scripts": {
     "dev": "astro dev",
