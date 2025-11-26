@@ -63,7 +63,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11",
     "bootstrap": "^5.3",
-    "sass": "^1.92",
+    "sass": "^1.93.3",
     "sass-loader": "^14.2.1"
   },
   "engines": {
