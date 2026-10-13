@@ -20,7 +20,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
+      },
+      {
+        test: /\.(svg|jpg|png)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/[name][ext]'
@@ -60,6 +67,10 @@ module.exports = {
         {
           from: "scss",
           to: "scss",
+        },
+        {
+          from: "fonts/LICENSE-*",
+          to: "fonts/[name][ext]",
         },
       ],
     }),

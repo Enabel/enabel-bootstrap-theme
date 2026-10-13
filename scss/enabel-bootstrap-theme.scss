@@ -1,5 +1,7 @@
-// Import ubuntu fonts
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700";
+// Self-hosted Ubuntu font
+@import "fonts";
+
+@include enabel-ubuntu-font-faces();
 
 // Custom variables
 @import "variables";
@@ -17,12 +19,3 @@
 @import "custom/callout";
 @import "custom/widget";
 @import "custom/timeline";
-
-// Flag icons
-@import "https://cdn.jsdelivr.net/gh/lipis/flag-icons/css/flag-icons.min.css";
-
-// Font Awesome
-@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css';
-@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/regular.min.css';
-@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/solid.min.css';
-@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/brands.min.css';

@@ -1,6 +1,6 @@
 {
   "name": "@enabel/enabel-bootstrap-theme",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "description": "Custom Bootstrap theme for Enabel applications with CSS and JavaScript components",
   "scripts": {
     "dev": "astro dev",
@@ -37,17 +37,20 @@
   },
   "files": [
     "dist/",
+    "fonts/",
     "scss/",
     "README.md",
     "CHANGELOG.md"
   ],
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@originjs/vite-plugin-commonjs": "^1.0",
     "astro": "^5.0",
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
     "copy-webpack-plugin": "^12.0",
     "css-loader": "^7.1.1",
+    "flag-icons": "^7.5.0",
     "mini-css-extract-plugin": "^2.9",
     "postcss": "^8.4",
     "postcss-loader": "^8.1",

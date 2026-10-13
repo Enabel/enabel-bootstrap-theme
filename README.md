@@ -16,6 +16,19 @@ A Bootstrap version 5 Enabel look-and-feel featuring:
 
 [Demonstrations of this theme](https://enabel-bootstrap-theme.netlify.app/)
 
+## Upgrading to 4.0
+
+The theme no longer loads anything from a third-party CDN:
+
+- The Ubuntu and Maven Pro fonts are self-hosted in `dist/fonts` instead of being fetched from Google Fonts.
+- Font Awesome and flag-icons are not bundled anymore. If your application uses them, require them yourself,
+  e.g. with AssetMapper:
+
+```bash
+php bin/console importmap:require @fortawesome/fontawesome-free/css/all.min.css
+php bin/console importmap:require flag-icons/css/flag-icons.min.css
+```
+
 ## Theme Developers
 
 If you find yourself wanting to enhance or fix the theme you'll be interested reading this

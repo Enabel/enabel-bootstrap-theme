@@ -1,5 +1,7 @@
 @import "variables";
-@import "https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap";
+@import "fonts";
+
+@include enabel-maven-pro-font-faces();
 
 * {
   box-sizing: border-box;
