@@ -17,6 +17,11 @@ module.exports = {
     publicPath: "../",
     filename: 'js/[name].min.js',
   },
+  // CSS is already compressed by sass; skip the JS minimizer so license banners stay inline
+  optimization: {
+    minimize: false,
+  },
+
   module: {
     rules: [
       {
