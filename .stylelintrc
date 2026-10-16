@@ -1,7 +1,17 @@
 {
-  "extends": ["stylelint-config-twbs-bootstrap"],
+  "extends": [
+    "stylelint-config-twbs-bootstrap"
+  ],
   "rules": {
     "selector-no-qualifying-type": null,
-    "declaration-no-important": null
+    "declaration-no-important": null,
+    "scss/at-function-named-arguments": [
+      "never",
+      {
+        "ignoreFunctions": [
+          "/^color\\.scale$/"
+        ]
+      }
+    ]
   }
 }
