@@ -4,7 +4,7 @@
   "description": "Custom Bootstrap theme for Enabel applications with CSS and JavaScript components",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "webpack --mode=production --node-env=production",
+    "prebuild": "webpack --mode=production --config-node-env=production",
     "build": "astro build",
     "preview": "astro preview",
     "start": "astro dev",
@@ -48,7 +48,7 @@
     "astro": "^5.0",
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
-    "copy-webpack-plugin": "^12.0",
+    "copy-webpack-plugin": "^14.0",
     "css-loader": "^7.1.1",
     "flag-icons": "^7.5.0",
     "mini-css-extract-plugin": "^2.9",
@@ -57,17 +57,17 @@
     "prettier": "^3.2",
     "prettier-plugin-astro": "^0.13",
     "style-loader": "^4.0",
-    "stylelint": "^16.5",
-    "stylelint-config-twbs-bootstrap": "^14.1",
+    "stylelint": "^16.26",
+    "stylelint-config-twbs-bootstrap": "^16.1",
     "typescript": "^5.8.3",
     "webpack": "^5.91",
-    "webpack-cli": "^5.1"
+    "webpack-cli": "^7.2"
   },
   "dependencies": {
     "@popperjs/core": "^2.11",
     "bootstrap": "^5.3",
     "sass": "^1.92",
-    "sass-loader": "^14.2.1"
+    "sass-loader": "^17.0"
   },
   "engines": {
     "node": ">=18.0.0"
