@@ -45,7 +45,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
     "@originjs/vite-plugin-commonjs": "^1.0",
-    "astro": "^5.0",
+    "astro": "^7.4",
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
     "copy-webpack-plugin": "^14.0",
@@ -55,7 +55,7 @@
     "postcss": "^8.4",
     "postcss-loader": "^8.1",
     "prettier": "^3.2",
-    "prettier-plugin-astro": "^0.13",
+    "prettier-plugin-astro": "^1.1",
     "style-loader": "^4.0",
     "stylelint": "^16.26",
     "stylelint-config-twbs-bootstrap": "^16.1",
