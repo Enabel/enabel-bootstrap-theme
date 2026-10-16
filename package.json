@@ -44,7 +44,6 @@
   ],
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
-    "@originjs/vite-plugin-commonjs": "^1.0",
     "astro": "^7.4",
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
