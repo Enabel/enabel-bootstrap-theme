@@ -44,7 +44,7 @@
   ],
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
-    "astro": "^7.4",
+    "astro": "^7.4.1",
     "autoprefixer": "^10.4",
     "clean-webpack-plugin": "^4.0",
     "copy-webpack-plugin": "^14.0",
@@ -58,7 +58,7 @@
     "style-loader": "^4.0",
     "stylelint": "^16.26",
     "stylelint-config-twbs-bootstrap": "^16.1",
-    "typescript": "^5.8.3",
+    "typescript": "^7.0.2",
     "webpack": "^5.91",
     "webpack-cli": "^7.2"
   },
@@ -79,5 +79,5 @@
     "url": "https://github.com/Enabel/enabel-bootstrap-theme/issues"
   },
   "homepage": "https://github.com/Enabel/enabel-bootstrap-theme#readme",
-  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

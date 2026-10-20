@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "stylelint-config-twbs-bootstrap 16.x only supports stylelint ^16",
+      "matchPackageNames": ["stylelint"],
+      "allowedVersions": "<17"
+    }
   ]
 }
