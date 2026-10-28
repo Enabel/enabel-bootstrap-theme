@@ -16,6 +16,19 @@ A Bootstrap version 5 Enabel look-and-feel featuring:
 
 [Demonstrations of this theme](https://enabel-bootstrap-theme.netlify.app/)
 
+## Upgrading to 4.1
+
+`sass` and `sass-loader` are no longer installed with the theme: they only build `dist/`. If your application
+compiles the theme sources (`scss/`, or the `sass` / `./scss` exports), require a Sass compiler yourself:
+
+```bash
+yarn add --dev sass
+```
+
+If your webpack config uses `sass-loader`, add it to the same command.
+
+Applications using the prebuilt CSS (`dist/`, the default export) have nothing to do.
+
 ## Upgrading to 4.0
 
 The theme no longer loads anything from a third-party CDN:
@@ -42,14 +55,14 @@ our issues and/or raise an issue before doing the pull request.
 
 You'll need the following tools installed on your device to begin working on the theme:
 
-- [NodeJS 16.x](https://nodejs.org/en/) or greater with NPM or greater to build
+- [NodeJS 24](https://nodejs.org/en/) (pinned in `.nvmrc`) with Yarn 1 to build
 
 ### First Install
 
 After your tools are in place, you should clone and install some packages:
 
 ```bash
-git clone git@github.com:enabl/enabel-bootstrap-theme.git
+git clone git@github.com:enabel/enabel-bootstrap-theme.git
 cd enabel-bootstrap-theme
 yarn install
 ```
