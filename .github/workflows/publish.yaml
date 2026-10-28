@@ -6,28 +6,61 @@ on:
 
 permissions:
   contents: read
-  id-token: write # npm trusted publishing (OIDC)
 
 jobs:
-  publish:
+  build:
+    # Prereleases would move the `latest` dist-tag
+    if: ${{ !github.event.release.prerelease }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
-          registry-url: https://registry.npmjs.org
           package-manager-cache: false
 
       - name: Check the tag matches package.json
-        run: test "${GITHUB_REF_NAME#v}" = "$(node -p 'require("./package.json").version')"
+        run: |
+          version=$(node -p 'require("./package.json").version')
+          if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --frozen-lockfile --ignore-scripts
 
       - name: Check the committed dist is up to date
         run: |
           yarn prebuild
-          git diff --exit-code dist
+          if [ -n "$(git status --porcelain dist)" ]; then
+            git status --porcelain dist
+            echo "::error::dist/ differs from the build, rebuild and commit it"
+            exit 1
+          fi
 
-      - run: npm publish --access public
+      - run: npm pack
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: package
+          path: '*.tgz'
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    # Only this job can mint the npm OIDC token; it runs no dependency code
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: package
+
+      - run: npm publish *.tgz --access public
