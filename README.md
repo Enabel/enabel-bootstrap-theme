@@ -19,10 +19,12 @@ A Bootstrap version 5 Enabel look-and-feel featuring:
 ## Upgrading to 4.1
 
 `sass` and `sass-loader` are no longer installed with the theme: they only build `dist/`. If your application
-compiles the theme sources (`scss/`, or the `sass` / `./scss` exports), require a Sass compiler yourself:
+compiles the theme sources (`scss/`, or the `sass` / `./scss` exports), require a Sass compiler yourself, plus the
+loader if your webpack config uses `sass-loader`:
 
 ```bash
 yarn add --dev sass
+yarn add --dev sass sass-loader   # webpack
 ```
 
 Applications using the prebuilt CSS (`dist/`, the default export) have nothing to do.
