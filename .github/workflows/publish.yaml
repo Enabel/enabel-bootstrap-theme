@@ -2,15 +2,14 @@ name: Publish to npm
 
 on:
   release:
-    types: [published]
+    # Full releases and promoted prereleases, never prereleases
+    types: [released]
 
 permissions:
   contents: read
 
 jobs:
   build:
-    # Prereleases would move the `latest` dist-tag
-    if: ${{ !github.event.release.prerelease }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
