@@ -1,0 +1,65 @@
+name: Publish to npm
+
+on:
+  release:
+    # Full releases and promoted prereleases, never prereleases
+    types: [released]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+
+      - name: Check the tag matches package.json
+        run: |
+          version=$(node -p 'require("./package.json").version')
+          if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
+
+      - run: yarn install --frozen-lockfile --ignore-scripts
+
+      - name: Check the committed dist is up to date
+        run: |
+          yarn prebuild
+          if [ -n "$(git status --porcelain dist)" ]; then
+            git status --porcelain dist
+            echo "::error::dist/ differs from the build, rebuild and commit it"
+            exit 1
+          fi
+
+      - run: npm pack
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: package
+          path: '*.tgz'
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    # Only this job can mint the npm OIDC token; it runs no dependency code
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: package
+
+      - run: npm publish *.tgz --access public
